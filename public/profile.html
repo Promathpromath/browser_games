@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль - Ягуар игры</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left"><a href="/index.html" class="nav-link">Главная</a></div>
+        <div class="header-center">
+            <span class="brand-text">ИГРЫ</span>
+            <div class="logo"><img src="/images/logo.png" alt="Лого"></div>
+            <span class="brand-text">ЯГУАРА</span>
+        </div>
+        <div class="header-right"><a href="/profile.html" class="nav-link">Профиль</a></div>
+    </div>
+    <div class="profile-wrapper">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar"><img src="/images/logo.png" alt="Avatar"></div>
+                <div class="profile-info"><h2>Личный кабинет</h2><p>Управление профилем и статистика</p></div>
+            </div>
+            <div class="info-field" id="nickField">
+                <span class="field-label">👤 Ник:</span>
+                <span class="field-value" id="nickValue"></span>
+                <button class="edit-btn" id="editNickBtn">Изменить</button>
+            </div>
+            <div class="info-field" id="emailField">
+                <span class="field-label">📧 Email:</span>
+                <span class="field-value" id="emailValue"></span>
+                <button class="edit-btn" id="editEmailBtn">Изменить</button>
+            </div>
+            <div class="info-field" id="passField">
+                <span class="field-label">🔒 Пароль:</span>
+                <span class="field-value">********</span>
+                <button class="edit-btn" id="editPassBtn">Сменить</button>
+            </div>
+            <div class="games-stats">
+                <h3>📊 Статистика игр</h3>
+                <div class="stat-row"><span class="stat-game"><img src="/images/arithmetic.jpg" style="width:24px;height:24px;border-radius:12px;vertical-align:middle;margin-right:8px;">Арифметика</span><span class="stat-total" id="mathTotal">0</span><span class="stat-count" id="mathCount">(0 игр)</span></div>
+                <div class="stat-row"><span class="stat-game"><img src="/images/jump.jpg" style="width:24px;height:24px;border-radius:12px;vertical-align:middle;margin-right:8px;">Ягуар: прыжок вверх</span><span class="stat-total" id="collectTotal">0</span><span class="stat-count" id="collectCount">(0 игр)</span></div>
+                <div class="stat-row"><span class="stat-game"><img src="/images/clicker.jpg" style="width:24px;height:24px;border-radius:12px;vertical-align:middle;margin-right:8px;">Лапка кликер</span><span class="stat-total" id="clickerTotal">0</span><span class="stat-count" id="clickerCount">(0 игр)</span></div>
+            </div>
+            <button class="delete-btn" id="deleteProfileBtn">🗑 Удалить профиль</button>
+            <div id="profileMessage" class="profile-message"></div>
+        </div>
+    </div>
+    <script src="/js/common.js"></script>
+    <script src="/js/profile.js"></script>
+</body>
+</html>

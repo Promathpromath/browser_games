@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Лапка кликер - Ягуар игры</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/clicker.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left"><a href="/index.html" class="nav-link">Главная</a></div>
+        <div class="header-center">
+            <span class="brand-text">ИГРЫ</span>
+            <div class="logo"><img src="/images/logo.png" alt="Лого"></div>
+            <span class="brand-text">ЯГУАРА</span>
+        </div>
+        <div class="header-right"><a href="/profile.html" class="nav-link">Профиль</a></div>
+    </div>
+    <div class="clicker-container">
+        <div class="clicker-card">
+            <div class="stats-panel">
+                <div>🏆 ОЧКИ <span id="scoreValue">0</span></div>
+                <div>⏱️ ВРЕМЯ <span id="timerValue">0</span></div>
+                <div>⚡ МНОЖИТЕЛЬ <span id="multiplier">×1</span></div>
+            </div>
+            <div class="jaguar-box" id="jaguarBtn">
+                <img src="/images/jaguar.png" alt="Ягуар">
+            </div>
+            <div class="mode-buttons">
+                <button class="mode-btn active" id="mode30">30 секунд</button>
+                <button class="mode-btn" id="mode180">3 минуты</button>
+                <button class="mode-btn" id="modeInf">Бесконечно (без рейтинга)</button>
+            </div>
+            <div class="booster-buttons">
+                <button class="booster-btn" id="boosterX4" disabled>×4 бустер (30 очков)</button>
+            </div>
+            <div id="resultMessage" class="result-message"></div>
+        </div>
+    </div>
+    <script src="/js/common.js"></script>
+    <script src="/js/clicker.js"></script>
+</body>
+</html>

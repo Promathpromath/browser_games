@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Ягуар: прыжок вверх - Ягуар игры</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/collect.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left"><a href="/index.html" class="nav-link">Главная</a></div>
+        <div class="header-center">
+            <span class="brand-text">ИГРЫ</span>
+            <div class="logo"><img src="/images/logo.png" alt="Лого"></div>
+            <span class="brand-text">ЯГУАРА</span>
+        </div>
+        <div class="header-right"><a href="/profile.html" class="nav-link">Профиль</a></div>
+    </div>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="stats">
+            <div>🏆 СЧЁТ: <span id="scoreValue">0</span></div>
+            <div>⬆️ ВЫСОТА: <span id="heightValue">0</span></div>
+        </div>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="/js/common.js"></script>
+    <script src="/js/collect.js"></script>
+</body>
+</html>

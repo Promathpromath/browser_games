@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Игры Ягуар</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left"><a href="/index.html" class="nav-link">Главная</a></div>
+        <div class="header-center">
+            <span class="brand-text">ИГРЫ</span>
+            <div class="logo"><img src="/images/logo.png" alt="Лого"></div>
+            <span class="brand-text">ЯГУАРА</span>
+        </div>
+        <div class="header-right"><a href="/profile.html" class="nav-link">Профиль</a></div>
+    </div>
+    <div class="games-grid">
+        <div class="game-card">
+            <img src="/images/arithmetic.jpg" alt="Арифметика">
+            <h3>Арифметика</h3>
+            <p>Реши 5 примеров на +, -, ×, ÷. 3 жизни, 30 секунд.</p>
+            <button class="btn-play" onclick="location.href='/math.html'">Играть</button>
+        </div>
+        <div class="game-card">
+            <img src="/images/jump.jpg" alt="Ягуар: прыжок вверх">
+            <h3>Ягуар: прыжок вверх</h3>
+            <p>Прыгай по платформам, двойной прыжок, победа на 1000 очков.</p>
+            <button class="btn-play" onclick="location.href='/collect.html'">Играть</button>
+        </div>
+        <div class="game-card">
+            <img src="/images/clicker.jpg" alt="Лапка кликер">
+            <h3>Лапка кликер</h3>
+            <p>Кликай по ягуару, покупай бустер ×4. Рейтинг = набранные очки.</p>
+            <button class="btn-play" onclick="location.href='/clicker.html'">Играть</button>
+        </div>
+    </div>
+    <script src="/js/common.js"></script>
+    <script>requireAuth();</script>
+</body>
+</html>

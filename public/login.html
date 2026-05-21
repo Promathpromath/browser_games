@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Ягуар игры</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo-mini">🐆</div>
+            <h2>Ягуар игры</h2>
+            <input type="email" id="email" placeholder="Email" autocomplete="off">
+            <input type="password" id="password" placeholder="Пароль">
+            <button class="btn-red" id="loginBtn">Войти / Регистрация</button>
+            <p class="note">Введите любой email и пароль — новый пользователь создастся автоматически</p>
+        </div>
+    </div>
+    <script src="/js/common.js"></script>
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', async () => {
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            if (!email || !password) {
+                alert('Заполните оба поля');
+                return;
+            }
+            const res = await fetch('/api/auth', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+            const data = await res.json();
+            if (res.ok) {
+                localStorage.setItem('yaguar_user', JSON.stringify(data.user));
+                window.location.replace('/index.html');
+            } else {
+                alert(data.error || 'Ошибка входа');
+            }
+        });
+    </script>
+</body>
+</html>
